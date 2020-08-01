@@ -1,6 +1,6 @@
 <p class="test">test</p>
 <div class="container">
-<cdk-virtual-scroll-viewport [itemSize]="50" class="example-viewport">
+<cdk-virtual-scroll-viewport autosize class="example-viewport">
   <table>
     <thead>
       <tr>
@@ -23,7 +23,7 @@
     <td class="example-item-detail">Item: {{item}}</td>
     <td class="example-item-detail">Index: {{index}}</td>
     <td class="example-item-detail">
-      <div *ngIf="odd">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nisi modi necessitatibus vero, natus dolorem consequatur provident sunt quia, aliquid iste quasi placeat error deserunt non harum reiciendis itaque illo?</div>
+      <div *ngIf="item % 2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nisi modi necessitatibus vero, natus dolorem consequatur provident sunt quia, aliquid iste quasi placeat error deserunt non harum reiciendis itaque illo?</div>
       Count: {{count}}
     </td>
     <td class="example-item-detail">First: {{first ? 'Yes' : 'No'}}</td>

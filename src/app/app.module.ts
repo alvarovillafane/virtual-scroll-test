@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { ScrollingModule  as  ExperimentalScrollingModule} from '@angular/cdk-experimental/scrolling';
+import { VirtualScrollerModule } from 'ngx-virtual-scroller';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ScrollingModule  as  ExperimentalScrollingModule} from '@angular/cdk-ex
     BrowserModule,
     AppRoutingModule,
     ScrollingModule,
-    ExperimentalScrollingModule
+    ExperimentalScrollingModule,
+    VirtualScrollerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,5 @@
 <p class="test">test</p>
-<div class="container">
-<cdk-virtual-scroll-viewport autosize class="example-viewport">
+  <virtual-scroller #scroll [items]="listItems" class="example-viewport" [enableUnequalChildrenSizes]="true">
   <table>
     <thead>
       <tr>
@@ -13,24 +12,16 @@
         <th>odd</th>
       </tr>
     </thead>
-  <tr *cdkVirtualFor="let item of items;
-                       let index = index;
-                       let count = count;
-                       let first = first;
-                       let last = last;
-                       let even = even;
-                       let odd = odd;" [class.example-alternate]="odd">
+    <tbody #container>
+      <tr *ngFor="let item of scroll.viewPortItems">
     <td class="example-item-detail">Item: {{item}}</td>
-    <td class="example-item-detail">Index: {{index}}</td>
-    <td class="example-item-detail">
-      <div *ngIf="item % 2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque nisi modi necessitatibus vero, natus dolorem consequatur provident sunt quia, aliquid iste quasi placeat error deserunt non harum reiciendis itaque illo?</div>
-      Count: {{count}}
-    </td>
-    <td class="example-item-detail">First: {{first ? 'Yes' : 'No'}}</td>
-    <td class="example-item-detail">Last: {{last ? 'Yes' : 'No'}}</td>
-    <td class="example-item-detail">Even: {{even ? 'Yes' : 'No'}}</td>
-    <td class="example-item-detail">Odd: {{odd ? 'Yes' : 'No'}}</td>
+    <td class="example-item-detail">Item: {{item}}</td>
+    <td class="example-item-detail">Item: {{item}}</td>
+    <td class="example-item-detail">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod beatae nulla accusantium facere minus nobis natus similique nisi eaque, eum facilis dolore, cumque nihil voluptas quaerat laudantium, eveniet voluptatibus exercitationem?</td>
+    <td class="example-item-detail">Item: {{item}}</td>
+    <td class="example-item-detail">Item: {{item}}</td>
+    <td class="example-item-detail">Item: {{item}}</td>
   </tr>
+  </tbody>
 </table>
-</cdk-virtual-scroll-viewport>
-</div>
+</virtual-scroller>

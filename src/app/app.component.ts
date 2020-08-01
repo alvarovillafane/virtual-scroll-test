@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'virtual-scroll';
-  items = Array.from({length: 100000}).map((_, i) => `Item #${i}`);
+  items = Array.from({length: 5}).map((_, i) => `Item #${i}`);
 }
